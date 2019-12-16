@@ -1,0 +1,9 @@
+.card {
+    background-color: #247BA0;
+    /* border-color: #70C1B3; */
+    border-width: 2px;
+}
+
+.btn-block {
+    background-color: #FFE066 !important;
+}
