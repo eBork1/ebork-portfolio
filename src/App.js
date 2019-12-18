@@ -13,7 +13,6 @@ import Menu from './Menu';
 import CountdownTimer from './countdown-timer/CountdownTimer';
 import Weather from './weather/Weather';
 
-
 function App() {
     return (
         <div className="App">
@@ -25,36 +24,35 @@ function App() {
                 </div>
             </div>
             <Clock />
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Menu />
+                    </Route>
+                    <Route exact path="/countdowntimer">
+                        <CountdownTimer />
+                    </Route>
 
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Menu />
-                </Route>
-                <Route exact path="/countdowntimer">
-                    <CountdownTimer />
-                </Route>
-
-                <Route exact path="/weather">
-                    <Weather />
-                </Route>
-                <Route exact path="/mind-reader">
-                    <CountdownTimer />
-                </Route>
-                <Route exact path="/tic-tac-toe">
-                    <CountdownTimer />
-                </Route>
-                <Route exact path="/calculator">
-                    <CountdownTimer />
-                </Route>
-                <Route exact path="/sliding-puzzle">
-                    <CountdownTimer />
-                </Route>
-                <Route exact path="/to-do-list">
-                    <CountdownTimer />
-                </Route>
-            </Switch>
-        </Router>
+                    <Route exact path="/weather">
+                        <Weather />
+                    </Route>
+                    <Route exact path="/mind-reader">
+                        <CountdownTimer />
+                    </Route>
+                    <Route exact path="/tic-tac-toe">
+                        <CountdownTimer />
+                    </Route>
+                    <Route exact path="/calculator">
+                        <CountdownTimer />
+                    </Route>
+                    <Route exact path="/sliding-puzzle">
+                        <CountdownTimer />
+                    </Route>
+                    <Route exact path="/to-do-list">
+                        <CountdownTimer />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
 
 

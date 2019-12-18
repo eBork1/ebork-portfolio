@@ -5,7 +5,7 @@ import Time from './Time';
 class Clock extends React.Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid border-bottom">
                 <div className="row">
                     <div className="col-lg-4 col-sm-12">
                         <Time />
