@@ -92,13 +92,7 @@ class CountdownTimer extends React.Component {
         // console.log(this.state);
         return (
             <>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-1">
-                            <HomeBtn />
-                        </div>
-                    </div>
-                </div>
+                <HomeBtn />
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-lg-5">
