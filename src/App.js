@@ -12,6 +12,7 @@ import Clock from './clock/Clock';
 import Menu from './Menu';
 import CountdownTimer from './countdown-timer/CountdownTimer';
 import Weather from './weather/Weather';
+import TicTacToe from './tic-tac-toe/TicTacToe';
 
 function App() {
     return (
@@ -40,7 +41,7 @@ function App() {
                         <CountdownTimer />
                     </Route>
                     <Route exact path="/tic-tac-toe">
-                        <CountdownTimer />
+                        <TicTacToe />
                     </Route>
                     <Route exact path="/calculator">
                         <CountdownTimer />

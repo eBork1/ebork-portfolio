@@ -19,17 +19,17 @@ class Menu extends React.Component {
                         buttonText="Go"
                         href="/weather"
                     />
-                    <Card
+                    {/* <Card
                         title="Mind Reader"
                         description="Try to beat it, I bet you can't!"
                         buttonText="Play"
                         href="#"
-                    />
+                    /> */}
                     <Card
                         title="Tic Tac Toe"
                         description="A classic. 2 players required."
                         buttonText="Play"
-                        href="#"
+                        href="tic-tac-toe"
                     />
                     <Card
                         title="Calculator"

@@ -80,22 +80,26 @@ class Weather extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container text-light">
-                    <div className="row">
-                        <div className="col-sm-12 col-lg-5">
-                            <p className="display-4">{this.state.weatherData.name}</p>
+
+                {this.state.weatherData == '' ? null: 
+                    <div className="container text-light">
+                        <div className="row">
+                            <div className="col-sm-12 col-lg-5">
+                                <p className="display-4">{this.state.weatherData.name}</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-12 col-lg-5">
+                                <img src={icon_url} alt="weather icon" ></img>
+                                <p>{this.state.description}</p>
+                                <p>Temperature <br />Current: {this.state.temp}° | LH: {this.state.temp_min}°/{this.state.temp_max}° | Feels Like: {this.state.feels_like}°</p>
+                                <p>Wind <br />{this.state.wind_speed} mph</p>
+                                <p>Humidity <br />{this.state.humidity}%</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-12 col-lg-5">
-                            <img src={icon_url} ></img>
-                            <p>{this.state.description}</p>
-                            <p>Temperature <br/>Current: {this.state.temp}° | LH: {this.state.temp_min}°/{this.state.temp_max}° | Feels Like: {this.state.feels_like}°</p>
-                            <p>Wind <br/>{this.state.wind_speed} mph</p>
-                            <p>Humidity <br/>{this.state.humidity}%</p>
-                        </div>
-                    </div>
-                </div>
+                    
+                }
             </>
         )
     }
