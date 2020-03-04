@@ -81,7 +81,7 @@ class Weather extends React.Component {
                     </div>
                 </div>
 
-                {this.state.weatherData == '' ? null: 
+                {this.state.weatherData === '' ? null: 
                     <div className="container text-light">
                         <div className="row">
                             <div className="col-sm-12 col-lg-5">
