@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeBtn from '../HomeBtn';
 import './tictactoe.css';
 
 function Square(props) {
@@ -50,7 +51,8 @@ class Board extends React.Component {
             status = "Next player: " + (this.state.xIsNext ? "X" : "O");
         }
         return (
-            <div className="container mt-5">
+            <div className="container mt-2">
+                <HomeBtn />
                 <div className="status text-white">{status}</div>
                 <div className="row ml-3">
                     {this.renderSquare(0)}
