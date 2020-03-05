@@ -47,7 +47,7 @@ class Menu extends React.Component {
                         title="To-Do-List"
                         description="Add and check off tasks to be completed"
                         buttonText="Start"
-                        href="#"
+                        href="/to-do-list"
                     />
                 </div>
             </div>
