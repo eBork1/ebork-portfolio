@@ -13,6 +13,7 @@ import Menu from './Menu';
 import CountdownTimer from './countdown-timer/CountdownTimer';
 import Weather from './weather/Weather';
 import Game from './tic-tac-toe/TicTacToe';
+import Todo from './to-do-list/todo';
 
 function App() {
     return (
@@ -50,7 +51,7 @@ function App() {
                         <CountdownTimer />
                     </Route>
                     <Route exact path="/to-do-list">
-                        <CountdownTimer />
+                        <Todo />
                     </Route>
                 </Switch>
             </Router>
