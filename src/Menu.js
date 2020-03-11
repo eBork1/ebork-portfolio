@@ -32,18 +32,6 @@ class Menu extends React.Component {
                         href="tic-tac-toe"
                     />
                     <Card
-                        title="Calculator"
-                        description="A simple calculator for quick calculations."
-                        buttonText="Go"
-                        href="#"
-                    />
-                    <Card
-                        title="Sliding Puzzle"
-                        description="Slide the puzzle pieces around to align the image"
-                        buttonText="Play"
-                        href="#"
-                    />
-                    <Card
                         title="To-Do-List"
                         description="Add and check off tasks to be completed"
                         buttonText="Start"
