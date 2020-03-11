@@ -21,7 +21,9 @@ function App() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-12 col-lg-5 mx-auto">
-                        <p className="display-4" id="title"> eBork Portfolio</p>
+                        <p className="display-4" id="title"> Bootcamp Portfolio</p>
+                        <h3 id="title"> Ethan Borkosky</h3>
+                        <p id="title">Best viewed on mobile!</p>
                     </div>
                 </div>
             </div>
