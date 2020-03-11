@@ -89,13 +89,12 @@ class CountdownTimer extends React.Component {
     }
 
     render() {
-        // console.log(this.state);
         return (
             <>
                 <HomeBtn />
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-12 col-lg-5">
+                        <div className="col-sm-12 col-lg-5 mx-auto">
                             <p className="display-4 text-white">End Date</p>
                             <form onSubmit={this.handleSubmit}>
                                 <input className="m-2" type="date" name="date" value={this.state.endDate} onChange={this.handleDateChange} /> <br />
@@ -118,8 +117,8 @@ class CountdownTimer extends React.Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-12 col-lg-5">
-                            <button className="btn btn-block fixed-bottom mb-2" onClick={this.resetTime}>Reset</button>
+                        <div className="col-sm-12 col-lg-5 mx-auto">
+                            <button className="btn btn-danger mb-2" onClick={this.resetTime}>Reset</button>
                         </div>
                     </div>
                 </div>
