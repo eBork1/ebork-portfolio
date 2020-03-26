@@ -10,13 +10,13 @@ class Menu extends React.Component {
                     <Card
                         title="Countdown Timer"
                         description="Countdown to a certain date!"
-                        buttonText="Go"
+                        buttonText="Start"
                         href="/countdowntimer"
                     />
                     <Card
                         title="Local Weather"
                         description="Get the current conditions for your area."
-                        buttonText="Go"
+                        buttonText="Start"
                         href="/weather"
                     />
                     {/* <Card
@@ -28,7 +28,7 @@ class Menu extends React.Component {
                     <Card
                         title="Tic Tac Toe"
                         description="A classic. 2 players required."
-                        buttonText="Play"
+                        buttonText="Start"
                         href="tic-tac-toe"
                     />
                     <Card
@@ -36,6 +36,12 @@ class Menu extends React.Component {
                         description="Add and check off tasks to be completed"
                         buttonText="Start"
                         href="/to-do-list"
+                    />
+                    <Card
+                        title="Calculator"
+                        description="its a calculator"
+                        buttonText="Start"
+                        href="/calculator"
                     />
                 </div>
             </div>
