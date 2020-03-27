@@ -1,8 +1,6 @@
 import React from 'react';
 import '../calculator/Calculator.css';
-import {
-    atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
-} from 'mathjs';
+import { evaluate } from 'mathjs';
 
 function Button(props) {
     return (
@@ -35,34 +33,33 @@ export default class Calculator extends React.Component {
 
     handleClick(value) {
         if (value === "=") {
+            // add current display number to end of equation and calculate
             this.state.equation.push(this.state.display);
             this.calculate();
         } else {
             if (value === "/" || value === "*" || value === "-" || value === "+") {
+                // update equation array with the current display (first num) and then the operator
                 this.state.equation.push(this.state.display, value);
+                // update operator display and reset main display
                 this.setState({
                     operator: value,
                     display: ""
                 });
-                console.log(this.state.equation);
             } else {
+                // concat current display with new value to add to the current number being entered
                 let newValue = this.state.display + value;
                 this.setState({ display: newValue });
-                console.log(this.state.equation);
             }
         }
     }
 
     calculate() {
         let equation = this.state.equation.join("");
-        console.log(equation);
         let answer = evaluate(equation);
         this.setState({
             display: answer,
             equation: [],
         });
-
-        console.log(answer);
     }
 
     clear() {
@@ -86,11 +83,11 @@ export default class Calculator extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
-                        <button className="border" id="calcButton" onClick={() => {this.clear()}}>
+                        <button className="border" id="calcButton" onClick={() => { this.clear() }}>
                             C
                         </button>
-                        {this.renderButton("()")}
-                        {this.renderButton("%")}
+                        {this.renderButton("(")}
+                        {this.renderButton(")")}
                         {this.renderButton("/")}
                     </div>
                 </div>
