@@ -70,11 +70,21 @@ export default class Calculator extends React.Component {
         });
     }
 
+    makeNegative() {
+        let currentDisplay = this.state.display;
+        if (currentDisplay.startsWith("-")) {
+            this.setState({ display: currentDisplay.substring(1) });
+        } else {
+            let newDisplay = "-" + currentDisplay;
+            this.setState({ display: newDisplay });
+        }
+    }
+
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 border text-white mx-auto" id="calcDisplay">
+                    <div className="col-lg-4 col-md-10 col-sm-12 border text-white mx-auto" id="calcDisplay">
                         {this.state.display}
                         <p className="text-muted">
                             {this.state.operator}
@@ -82,7 +92,7 @@ export default class Calculator extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
+                    <div className="col-lg-4 col-md-10 col-sm-12 mx-auto">
                         <button className="border" id="calcButton" onClick={() => { this.clear() }}>
                             C
                         </button>
@@ -92,7 +102,7 @@ export default class Calculator extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
+                    <div className="col-lg-4 col-md-10 col-sm-12 mx-auto">
                         {this.renderButton(7)}
                         {this.renderButton(8)}
                         {this.renderButton(9)}
@@ -100,7 +110,7 @@ export default class Calculator extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
+                    <div className="col-lg-4 col-md-10 col-sm-12 mx-auto">
                         {this.renderButton(4)}
                         {this.renderButton(5)}
                         {this.renderButton(6)}
@@ -108,7 +118,7 @@ export default class Calculator extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
+                    <div className="col-lg-4 col-md-10 col-sm-12 mx-auto">
                         {this.renderButton(1)}
                         {this.renderButton(2)}
                         {this.renderButton(3)}
@@ -116,8 +126,10 @@ export default class Calculator extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-8 col-sm-12 mx-auto">
-                        {this.renderButton("+/-")}
+                    <div className="col-lg-4 col-md-10 col-sm-12 mx-auto">
+                        <button className="border" id="calcButton" onClick={() => { this.makeNegative() }}>
+                            +/-
+                        </button>
                         {this.renderButton(0)}
                         {this.renderButton(".")}
                         {this.renderButton("=")}
