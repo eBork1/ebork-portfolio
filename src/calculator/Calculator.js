@@ -1,5 +1,6 @@
 import React from 'react';
 import '../calculator/Calculator.css';
+import HomeBtn from '../HomeBtn';
 import { evaluate } from 'mathjs';
 
 function Button(props) {
@@ -83,6 +84,7 @@ export default class Calculator extends React.Component {
     render() {
         return (
             <div className="container">
+                <HomeBtn />
                 <div className="row">
                     <div className="col-lg-4 col-md-10 col-sm-12 border text-white mx-auto" id="calcDisplay">
                         {this.state.display}
