@@ -15,6 +15,7 @@ import Weather from './weather/Weather';
 import Game from './tic-tac-toe/TicTacToe';
 import Todo from './to-do-list/todo';
 import Calculator from './calculator/Calculator';
+import Puzzle from './puzzle-slider/Puzzle';
 
 function App() {
     return (
@@ -51,7 +52,7 @@ function App() {
                         <Calculator />
                     </Route>
                     <Route exact path="/sliding-puzzle">
-                        <CountdownTimer />
+                        <Puzzle />
                     </Route>
                     <Route exact path="/to-do-list">
                         <Todo />
