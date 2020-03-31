@@ -9,13 +9,13 @@ class Menu extends React.Component {
                 <div className="col-sm-12 col-lg-5 mx-auto">
                     <Card
                         title="Countdown Timer"
-                        description="Countdown to a certain date!"
+                        description="Countdown to a certain date"
                         buttonText="Start"
                         href="/countdowntimer"
                     />
                     <Card
                         title="Local Weather"
-                        description="Get the current conditions for your area."
+                        description="Get the current conditions for your area"
                         buttonText="Start"
                         href="/weather"
                     />
@@ -27,7 +27,7 @@ class Menu extends React.Component {
                     /> */}
                     <Card
                         title="Tic Tac Toe"
-                        description="A classic. 2 players required."
+                        description="A classic. 2 players required"
                         buttonText="Start"
                         href="tic-tac-toe"
                     />
@@ -42,6 +42,12 @@ class Menu extends React.Component {
                         description="its a calculator"
                         buttonText="Start"
                         href="/calculator"
+                    />
+                    <Card
+                        title="Sliding Puzzle"
+                        description="Slide the pieces around to solve the puzzle"
+                        buttonText="Start"
+                        href="/sliding-puzzle"
                     />
                 </div>
             </div>
